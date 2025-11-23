@@ -1,65 +1,72 @@
-import Image from "next/image";
+// app/page.tsx
+// Nous allons conserver le nom HomePage si vous gardez tout le contenu ici,
+// ou idéalement, le renommer en HeroSection et l'importer dans une page plus simple.
+// Je garde tout le code ici pour la refonte immédiate.
 
-export default function Home() {
+import Link from "next/link";
+
+const HomePage = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+    // Hauteur presque pleine (moins la hauteur du header) pour un effet "Landing Page"
+    <div className="relative isolate overflow-hidden h-[calc(100vh-64px)] bg-gray-950 flex items-center justify-center">
+      {/* Effet d'arrière-plan futuriste inspiré par le logo (déjà défini dans ma suggestion précédente).
+        Ceci ajoute de la profondeur et de l'unicité.
+      */}
+      <div className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl opacity-20">
+        <div
+          className="relative left-1/2 -z-10 aspect-1155/678 w-288.75 max-w-none -translate-x-1/2 rotate-30 bg-linear-to-tr from-[#312e81] to-[#6366f1] opacity-30"
+          style={{
+            clipPath:
+              "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
+          }}
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+      </div>
+
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-20">
+        {/* Titre Principal */}
+        <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-7xl lg:text-8xl">
+          Développons votre{" "}
+          <span className="text-indigo-400">vision digitale</span>
+        </h1>
+
+        {/* Slogan */}
+        <p className="mt-6 max-w-3xl mx-auto text-xl text-gray-400 font-light leading-8">
+          Nous développons des applications sur mesure pour répondre à vos
+          besoins.
+          <br className="hidden sm:inline" />
+          <span className="text-indigo-400 italic font-medium">
+            Ensemble, façonnons l&apos;avenir.
+          </span>
+        </p>
+
+        {/* Boutons d'Action (Cible: Contact & Services) */}
+        <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
+          {/* Bouton Principal - CTA fort */}
+          <Link
+            href="/contact"
+            className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3 border-2 border-indigo-600 text-base font-semibold rounded-lg text-white bg-indigo-600 hover:bg-indigo-700 hover:border-indigo-700 transition duration-300 shadow-xl shadow-indigo-500/30"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            Démarrer un projet
+          </Link>
+
+          {/* Bouton Secondaire - Transparent */}
+          <Link
+            href="/services"
+            className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3 border-2 border-gray-700 text-base font-medium rounded-lg text-gray-300 hover:text-white hover:border-white transition duration-300 bg-gray-900"
           >
-            Documentation
-          </a>
+            Explorer nos services →
+          </Link>
         </div>
-      </main>
+
+        {/* Indication visuelle de défilement (optionnel) */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+          <div className="h-10 w-6 border-2 border-gray-600 rounded-full flex justify-center pt-1 animate-bounce">
+            <div className="h-2 w-1 bg-gray-500 rounded-full"></div>
+          </div>
+        </div>
+      </div>
     </div>
   );
-}
+};
+
+export default HomePage;
