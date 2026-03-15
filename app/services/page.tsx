@@ -10,21 +10,21 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Nos Services | Taram Tech",
   description:
-    "Développement de sites internets, applications mobiles et applications web sur mesure avec l'expertise Next.js.",
+    "Développement de sites internets, applications mobiles et applications web sur mesure.",
 };
 
 const servicesData = [
   {
     icon: GlobeAltIcon,
-    title: "Développement de sites internets (Next.js)",
+    title: "Développement de sites internets",
     description:
-      "Conception de plateformes vitrines ou d'entreprise ultra-rapides, optimisées pour le SEO grâce au Server-Side Rendering et à la Static Generation.",
+      "Conception de plateformes vitrines ou d'entreprise ultra-rapides, optimisées pour le SEO.",
   },
   {
     icon: DevicePhoneMobileIcon,
     title: "Applications Mobiles (Cross-Platform)",
     description:
-      "Création d'applications intuitives et performantes pour iOS et Android (React Native/Flutter). Une solution unique pour toucher tous vos utilisateurs.",
+      "Création d'applications intuitives et performantes pour iOS et Android. Une solution unique pour toucher tous vos utilisateurs.",
   },
   {
     icon: CodeBracketIcon,
