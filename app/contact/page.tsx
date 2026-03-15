@@ -17,13 +17,13 @@ const contactInfo = [
   {
     icon: PhoneIcon,
     label: "Téléphone",
-    value: "+33 1 23 45 67 89",
-    href: "tel:+33123456789",
+    value: "+227 98 56 34 82",
+    href: "tel:+22798563482",
   },
   {
     icon: MapPinIcon,
-    label: "Adresse (France)",
-    value: "Paris, France",
+    label: "Adresse (Niger)",
+    value: "Niamey, Niger",
     href: "#",
   },
 ];

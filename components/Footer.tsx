@@ -69,7 +69,7 @@ const Footer = () => {
             </h5>
             <div className="space-y-3">
               <p className="text-gray-400 text-sm">
-                Adresse : 123 Rue de l&apos;Innovation
+                Adresse : Niamey - Niger
               </p>
               <a
                 href="mailto:contact@taramtech.com"
@@ -109,7 +109,6 @@ const Footer = () => {
         <div className="mt-16 border-t border-gray-800/50 pt-8">
           <p className="text-center text-xs text-gray-500 font-light">
             &copy; {new Date().getFullYear()} Taram Tech. Tous droits réservés.
-            Développé avec Next.js et Tailwind CSS.
           </p>
         </div>
       </div>

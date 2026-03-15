@@ -8,7 +8,7 @@ const projects = [
   {
     id: 1,
     title: "Plateforme de Gestion SaaS B2B",
-    category: "Application Web / Next.js",
+    category: "Application Web",
     description:
       "Développement complet d'un outil interne pour l'automatisation des flux de travail et la gestion client.",
     imagePlaceholder: "bg-indigo-900/30",
@@ -17,7 +17,7 @@ const projects = [
   {
     id: 2,
     title: "Application Mobile de Fidélisation",
-    category: "Mobile Cross-Platform / React Native",
+    category: "Mobile Cross-Platform",
     description:
       "Application intuitive pour améliorer l'engagement client et gérer les programmes de fidélité via iOS et Android.",
     imagePlaceholder: "bg-gray-800",
@@ -26,7 +26,7 @@ const projects = [
   {
     id: 3,
     title: "Site Vitrine Haute Performance",
-    category: "Site Web Statique / Next.js & Tailwind",
+    category: "Site Web",
     description:
       "Refonte complète pour un site vitrine 100% SEO-friendly, garantissant un score Lighthouse parfait.",
     imagePlaceholder: "bg-indigo-700/30",
@@ -37,7 +37,7 @@ const projects = [
 export const metadata: Metadata = {
   title: "Nos Réalisations | Taram Tech Portfolio",
   description:
-    "Découvrez nos projets récents : sites web, applications mobiles et applications web développés sur mesure pour nos clients. Expertise Next.js.",
+    "Découvrez nos projets récents : sites web, applications mobiles et applications web développés sur mesure pour nos clients.",
 };
 
 const PortfolioPage = () => {
