@@ -1,9 +1,7 @@
-// app/portfolio/page.tsx
 import { Metadata } from "next";
 import Link from "next/link";
-import { ArrowUpRightIcon } from "@heroicons/react/24/outline"; // Icône pour les liens externes
+import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
 
-// Données de démo pour le portfolio (Remplacez ceci par de vraies données!)
 const projects = [
   {
     id: 1,
@@ -42,10 +40,8 @@ export const metadata: Metadata = {
 
 const PortfolioPage = () => {
   return (
-    // Le min-h-[80vh] est conservé pour assurer une hauteur suffisante
     <div className="min-h-[80vh] py-24 sm:py-32 bg-gray-950">
       <div className="container mx-auto px-6 lg:px-8 max-w-7xl">
-        {/* En-tête de la Section */}
         <div className="text-center mb-16">
           <p className="text-base font-semibold leading-7 text-indigo-400 uppercase tracking-widest">
             Portfolio
@@ -58,22 +54,18 @@ const PortfolioPage = () => {
           </p>
         </div>
 
-        {/* Grille de projets - Cartes Dark Mode Pro */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
             <div
               key={project.id}
               className="group bg-gray-900 rounded-xl shadow-2xl overflow-hidden border border-gray-800 transition duration-300 hover:border-indigo-600/70 transform hover:scale-[1.01]"
             >
-              {/* Espace Visuel du Projet */}
               <div
                 className={`h-48 ${project.imagePlaceholder} flex items-center justify-center text-gray-400 text-sm border-b border-gray-800`}
               >
-                {/* Utilisation de <Image> de Next.js pour le vrai logo du projet ici */}
                 [Image du Projet {project.id}]
               </div>
 
-              {/* Détails du Projet */}
               <div className="p-6">
                 <p className="text-sm font-semibold text-indigo-400 mt-1 uppercase tracking-wider">
                   {project.category}
@@ -85,7 +77,6 @@ const PortfolioPage = () => {
                   {project.description}
                 </p>
 
-                {/* Lien vers l'étude de cas (simulé) */}
                 <Link
                   href={project.link}
                   className="mt-4 inline-flex items-center text-sm font-semibold text-white hover:text-indigo-400 transition duration-200"
@@ -98,7 +89,6 @@ const PortfolioPage = () => {
           ))}
         </div>
 
-        {/* Appel à l'action pour le contact après le portfolio */}
         <div className="text-center mt-20">
           <Link
             href="/contact"
