@@ -1,4 +1,3 @@
-// components/ContactForm.tsx
 "use client";
 
 import React, { useState } from "react";
@@ -23,7 +22,6 @@ const ContactForm = () => {
     setStatus("loading");
 
     try {
-      // Appel à l'API Route de Next.js
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -45,28 +43,22 @@ const ContactForm = () => {
     }
   };
 
-  // Détermination de la couleur du bouton
   const buttonClasses =
     status === "loading"
       ? "bg-indigo-700 disabled:opacity-70 cursor-not-allowed"
       : status === "success"
-      ? "bg-green-600 hover:bg-green-700"
-      : "bg-indigo-600 hover:bg-indigo-700";
+        ? "bg-green-600 hover:bg-green-700"
+        : "bg-indigo-600 hover:bg-indigo-700";
 
   return (
-    // Bloc Formulaire stylisé pour le Dark Mode
     <div className="bg-gray-900 p-8 md:p-12 rounded-xl shadow-2xl border border-indigo-900/50">
       <h2 className="text-3xl font-bold text-white mb-8">
         Envoyez-nous un message
       </h2>
 
       <form onSubmit={handleSubmit} className="space-y-6">
-        {/* Champ Nom */}
         <div>
-          <label
-            htmlFor="nom"
-            className="block text-sm font-medium text-gray-300"
-          >
+          <label htmlFor="nom" className="block text-sm font-medium text-gray-300">
             Nom complet
           </label>
           <input
@@ -81,13 +73,9 @@ const ContactForm = () => {
           />
         </div>
 
-        {/* Champ Email */}
         <div>
-          <label
-            htmlFor="email"
-            className="block text-sm font-medium text-gray-300"
-          >
-            Adresse email professionnelle
+          <label htmlFor="email" className="block text-sm font-medium text-gray-300">
+            Adresse email
           </label>
           <input
             type="email"
@@ -101,12 +89,8 @@ const ContactForm = () => {
           />
         </div>
 
-        {/* Champ Message */}
         <div>
-          <label
-            htmlFor="message"
-            className="block text-sm font-medium text-gray-300"
-          >
+          <label htmlFor="message" className="block text-sm font-medium text-gray-300">
             Votre projet ou question
           </label>
           <textarea
@@ -121,7 +105,6 @@ const ContactForm = () => {
           />
         </div>
 
-        {/* Bouton d'Envoi et Status */}
         <div className="pt-4">
           <button
             type="submit"
@@ -163,7 +146,6 @@ const ContactForm = () => {
           </button>
         </div>
 
-        {/* Messages de statut */}
         {status === "success" && (
           <p className="mt-4 text-center text-sm font-medium text-green-400">
             Merci ! Votre message a été reçu avec succès.

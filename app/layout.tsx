@@ -1,16 +1,14 @@
-import "./globals.css"; // Votre fichier Tailwind CSS
+import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Inter } from "next/font/google"; // Utilisation d'une police moderne (Inter est recommandée par Next.js)
+import { Inter } from "next/font/google";
 
-// Configuration de la police
 const inter = Inter({ subsets: ["latin"] });
 
-// Métadonnées (pour le SEO)
 export const metadata = {
-  title: "Taram Tech | Développement Web & App",
+  title: "Taramtech",
   description:
-    "Startup spécialisée dans la création de sites web et applications sur mesure avec Next.js.",
+    "Startup spécialisée dans la création de sites web et applications sur mesure au Niger.",
 };
 
 export default function RootLayout({
@@ -19,10 +17,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    // Application de la police Inter et d'un défilement doux
     <html lang="fr" className={`${inter.className} scroll-smooth`}>
       <body>
-        {/* Changement de la couleur de fond pour le style Dark Mode Pro */}
         <div className="min-h-screen bg-gray-950 text-gray-100">
           <Header />
           <main className="pt-16">{children}</main>

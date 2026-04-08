@@ -1,11 +1,9 @@
-"use client"; // <-- AJOUTEZ CETTE LIGNE
+"use client";
 import React, { useState } from "react";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({ nom: "", email: "", message: "" });
-  const [status, setStatus] = useState<
-    "idle" | "loading" | "success" | "error"
-  >("idle");
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -18,7 +16,6 @@ const ContactSection = () => {
     setStatus("loading");
 
     try {
-      // 1. Appel à l'API Route de Next.js
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -27,7 +24,7 @@ const ContactSection = () => {
 
       if (response.ok) {
         setStatus("success");
-        setFormData({ nom: "", email: "", message: "" }); // Réinitialiser le formulaire
+        setFormData({ nom: "", email: "", message: "" });
       } else {
         setStatus("error");
       }
@@ -42,20 +39,13 @@ const ContactSection = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold sm:text-4xl">Contactez-nous</h2>
-          <p className="mt-4 text-xl text-indigo-400">
-            Parlons de votre prochain projet.
-          </p>
+          <p className="mt-4 text-xl text-indigo-400"> Parlons de votre prochain projet. </p>
         </div>
 
         <div className="max-w-xl mx-auto bg-white p-8 rounded-xl shadow-2xl">
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
-              <label
-                htmlFor="nom"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Nom
-              </label>
+              <label htmlFor="nom" className="block text-sm font-medium text-gray-700"> Nom </label>
               <input
                 type="text"
                 name="nom"
@@ -68,12 +58,7 @@ const ContactSection = () => {
             </div>
 
             <div>
-              <label
-                htmlFor="email"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Email
-              </label>
+              <label htmlFor="email" className="block text-sm font-medium text-gray-700"> Email </label>
               <input
                 type="email"
                 name="email"
@@ -86,12 +71,7 @@ const ContactSection = () => {
             </div>
 
             <div>
-              <label
-                htmlFor="message"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Message
-              </label>
+              <label htmlFor="message" className="block text-sm font-medium text-gray-700"> Message </label>
               <textarea
                 name="message"
                 id="message"
@@ -113,7 +93,6 @@ const ContactSection = () => {
               </button>
             </div>
 
-            {/* Messages de statut */}
             {status === "success" && (
               <p className="mt-4 text-center text-sm font-medium text-green-500">
                 Message envoyé avec succès !

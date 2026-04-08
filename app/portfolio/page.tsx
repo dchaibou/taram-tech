@@ -5,35 +5,48 @@ import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
 const projects = [
   {
     id: 1,
-    title: "Plateforme de Gestion SaaS B2B",
+    title: "Application Web 1",
     category: "Application Web",
-    description:
-      "Développement complet d'un outil interne pour l'automatisation des flux de travail et la gestion client.",
+    description: "..................",
     imagePlaceholder: "bg-indigo-900/30",
     link: "#",
   },
   {
     id: 2,
-    title: "Application Mobile de Fidélisation",
-    category: "Mobile Cross-Platform",
-    description:
-      "Application intuitive pour améliorer l'engagement client et gérer les programmes de fidélité via iOS et Android.",
+    title: "Site Web 1",
+    category: "Site Web",
+    description: "..................",
     imagePlaceholder: "bg-gray-800",
     link: "#",
   },
   {
     id: 3,
-    title: "Site Vitrine Haute Performance",
+    title: "Site Web 2",
     category: "Site Web",
-    description:
-      "Refonte complète pour un site vitrine 100% SEO-friendly, garantissant un score Lighthouse parfait.",
+    description: "..................",
+    imagePlaceholder: "bg-indigo-700/30",
+    link: "#",
+  },
+  {
+    id: 4,
+    title: "App Mobile 1",
+    category: "App Mobile",
+    description: "..................",
+    imagePlaceholder: "bg-gray-800",
+    link: "#",
+  },
+  {
+    id: 5,
+    title: "Application Web 2",
+    category: "Application Web",
+    description: "..................",
     imagePlaceholder: "bg-indigo-700/30",
     link: "#",
   },
 ];
 
 export const metadata: Metadata = {
-  title: "Nos Réalisations | Taram Tech Portfolio",
+  title: "Nos Réalisations | Taramtech Portfolio",
   description:
     "Découvrez nos projets récents : sites web, applications mobiles et applications web développés sur mesure pour nos clients.",
 };
@@ -60,9 +73,7 @@ const PortfolioPage = () => {
               key={project.id}
               className="group bg-gray-900 rounded-xl shadow-2xl overflow-hidden border border-gray-800 transition duration-300 hover:border-indigo-600/70 transform hover:scale-[1.01]"
             >
-              <div
-                className={`h-48 ${project.imagePlaceholder} flex items-center justify-center text-gray-400 text-sm border-b border-gray-800`}
-              >
+              <div className={`h-48 ${project.imagePlaceholder} flex items-center justify-center text-gray-400 text-sm border-b border-gray-800`}>
                 [Image du Projet {project.id}]
               </div>
 
@@ -81,7 +92,7 @@ const PortfolioPage = () => {
                   href={project.link}
                   className="mt-4 inline-flex items-center text-sm font-semibold text-white hover:text-indigo-400 transition duration-200"
                 >
-                  Voir l&apos;étude de cas
+                  Consulter
                   <ArrowUpRightIcon className="h-4 w-4 ml-1" />
                 </Link>
               </div>

@@ -28,8 +28,8 @@ const contactInfo = [
 ];
 
 export const metadata: Metadata = {
-  title: "Contactez-nous | Taram Tech",
-  description: "Prenez contact avec l'équipe Taram Tech pour discuter de votre projet de développement web ou mobile. Devis gratuit.",
+  title: "Contactez-nous | Taramtech",
+  description: "Prenez contact avec l'équipe Taramtech pour discuter de votre projet de développement web ou mobile. Devis gratuit.",
 };
 
 const ContactPage = () => {
